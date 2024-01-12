@@ -1,0 +1,66 @@
+/* ShoppingCarousel.css */
+.shopping-carousel-container {
+  position: relative;
+  width: 100%; /* Use full width for responsiveness */
+  margin: auto;
+  max-width: 800px; /* Set a max-width if needed */
+}
+
+.shopping-carousel-item {
+  position: relative;
+}
+
+.carousel-item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  padding: 10px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.shopping-carousel-item:hover .carousel-item-overlay {
+  opacity: 1;
+}
+
+.item-text {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1;
+  opacity: 1;
+}
+
+.item-buttons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.shopping-carousel-item:hover .item-buttons {
+  opacity: 1;
+}
+
+.item-buttons button {
+  background-color: #fdfdfd;
+  color: #040404;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 8px;
+}
